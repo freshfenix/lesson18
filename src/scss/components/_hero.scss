@@ -1,0 +1,12 @@
+.hero {
+  margin: auto;
+
+  text-align: center;
+
+  &__title {
+    margin-bottom: 47px;
+
+    letter-spacing: 8%;
+    text-transform: uppercase;
+  }
+}

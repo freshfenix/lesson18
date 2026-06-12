@@ -1,0 +1,115 @@
+@use "variables" as *;
+@use "skin" as *;
+@use "extends" as *;
+@use "mixins-media" as *;
+
+@mixin container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include lg-min {
+    max-width: 1140px;
+  }
+  // @include lg {
+  //   max-width: 960px;
+  // }
+  // @include md {
+  //   max-width: 720px;
+  // }
+  // @include sm {
+  //   max-width: 540px;
+  // }
+}
+
+@mixin title($color) {
+  text-align: center;
+
+  color: $color;
+
+  font-family: $font-family2;
+  font-weight: $font-weight-sm;
+
+  @include lg-min {
+    font-size: $font-size-4xl;
+  }
+  @include lg {
+    font-size: $font-size-4xl;
+  }
+  @include md {
+    font-size: $font-size-3xl;
+  }
+  @include sm {
+    font-size: $font-size-2xl;
+  }
+}
+
+@mixin subtitle($size, $color) {
+  color: $color;
+
+  font-family: $font-family2;
+  font-size: $size;
+  font-weight: $font-weight-lg;
+}
+
+@mixin text($size, $color) {
+  color: $color;
+
+  font-family: $font-family;
+  font-size: $size;
+  font-weight: $font-weight-md;
+}
+
+@mixin button($padding-block, $padding-inline) {
+  cursor: pointer;
+  letter-spacing: 10.5%;
+
+  color: $color-white;
+  background-color: $color-primary;
+
+  font-family: $font-family;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-md;
+
+  @include lg-min {
+    padding-block: $padding-block;
+    padding-inline: $padding-inline;
+  }
+  @include lg {
+    padding-block: $padding-block;
+    padding-inline: $padding-inline;
+  }
+  @include md {
+    padding-block: $padding-block - 5px;
+    padding-inline: $padding-inline - 25px;
+  }
+  @include sm {
+    padding-block: $padding-block - 9px;
+    padding-inline: $padding-inline - 40px;
+  }
+
+  &--light {
+    border: 2px $color-white solid;
+    background-color: $color-white-transparent;
+  }
+
+  &:hover {
+    background-color: $color-accent;
+  }
+}
+
+@mixin link($size, $color) {
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: $color;
+
+  font-family: $font-family;
+  font-size: $size;
+  font-weight: $font-weight-md;
+
+  &:hover {
+    color: $color-accent;
+  }
+}

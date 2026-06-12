@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+h1 {
+  @include title($color-white);
+}
+
+h2 {
+  @include subtitle($font-size-3xl, $color-primary);
+}
+
+h3 {
+  @include subtitle($font-size-2xl, $color-primary);
+}
+
+h4 {
+  @include subtitle($font-size-xl, $color-primary);
+}
+
+h5 {
+  @include subtitle($font-size-lg, $color-primary);
+}
+
+h6 {
+  @include subtitle($font-size-md, $color-primary);
+}
+
+p {
+  @include text($font-size-md, $color-primary);
+}
+
+a {
+  @include link($font-size-md, $color-white);
+}
+
+button {
+  @include button(18px, 70px);
+}

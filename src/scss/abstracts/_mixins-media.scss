@@ -1,0 +1,53 @@
+@use "variables" as *;
+
+// MEDIA MIXINS
+
+@mixin lg {
+  @media (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+// MIN MIXINS
+
+@mixin lg-min {
+  @media (min-width: $breakpoint-lg-plus) {
+    @content;
+  }
+}
+
+@mixin md-min {
+  @media (min-width: $breakpoint-md-plus) {
+    @content;
+  }
+}
+
+@mixin sm-min {
+  @media (min-width: $breakpoint-sm-plus) {
+    @content;
+  }
+}
+
+@mixin xs-min {
+  @media (min-width: $breakpoint-xs-plus) {
+    @content;
+  }
+}
