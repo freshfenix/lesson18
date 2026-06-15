@@ -128,7 +128,7 @@ $local-height: 200px;
 
     height: 100%;
 
-    letter-spacing: 10%;
+    letter-spacing: 0.1em;
     pointer-events: auto;
 
     @include link(20px, $color-white);

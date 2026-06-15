@@ -22,9 +22,11 @@
 
     &::after {
       position: absolute;
-      right: 83px;
+
       bottom: -30px;
-      left: 83px;
+      width: 60%;
+      left: 50%;
+      transform: translateX(-50%);
 
       display: block;
 
@@ -63,7 +65,7 @@
 
     h2.subtitle {
       text-align: center;
-      letter-spacing: 29.9%;
+      letter-spacing: 0.299em;
       font-size: 1rem;
 
       font-weight: 100;
@@ -75,7 +77,7 @@
 
         margin-top: 6px;
 
-        letter-spacing: 5%;
+        letter-spacing: 0.05em;
 
         color: $color-white;
 

@@ -7,7 +7,7 @@
   &__title {
     margin-bottom: 47px;
 
-    letter-spacing: 8%;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 
     @include title($color-white);
