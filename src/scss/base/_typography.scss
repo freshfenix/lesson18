@@ -1,27 +1,21 @@
-@use "../abstracts/" as *;
+@use '../abstracts/' as *;
+
+html {
+  overflow-y: scroll;
+  font-family: $font-family;
+  font-size: $font-size-md;
+}
+body {
+  color: $color-gray;
+  background-color: $color-white;
+}
 
 h1 {
   @include title($color-white);
 }
 
 h2 {
-  @include subtitle($font-size-3xl, $color-primary);
-}
-
-h3 {
-  @include subtitle($font-size-2xl, $color-primary);
-}
-
-h4 {
-  @include subtitle($font-size-xl, $color-primary);
-}
-
-h5 {
-  @include subtitle($font-size-lg, $color-primary);
-}
-
-h6 {
-  @include subtitle($font-size-md, $color-primary);
+  @include subtitle($color-primary);
 }
 
 p {
@@ -30,8 +24,4 @@ p {
 
 a {
   @include link($font-size-md, $color-white);
-}
-
-button {
-  @include button(18px, 70px);
 }

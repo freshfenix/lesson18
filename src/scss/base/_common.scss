@@ -1,50 +1,25 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .container {
   @include container;
 }
+
+.visually-hidden {
+  @include hidden;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
+
   min-height: 100vh;
-}
-
-.overlay {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  &::before {
-    position: absolute;
-    z-index: -2;
-
-    content: '';
-
-    background-color: $color-primary;
-
-    inset: 0;
-  }
-  &::after {
-    position: absolute;
-    z-index: -1;
-
-    content: '';
-
-    opacity: 0.4;
-    background: $color-primary url(../../../assets/images/img-header.webp) center / cover no-repeat;
-
-    inset: 0;
-  }
 }
 
 .btn {
-  @include button(19px, 68px);
+  @include button;
 
   &__box {
     display: flex;
-    gap: 20px;
+    gap: $gap;
     justify-content: center;
   }
 }

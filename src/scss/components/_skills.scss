@@ -1,0 +1,136 @@
+@use "../abstracts/" as *;
+@use "sass:math";
+$local-gap: math.div(40px, 3);
+$local-height: 200px;
+.skills {
+  @include sm-min {
+    padding: $gap-sm;
+    padding-bottom: 40px;
+  }
+  @include sm {
+    padding: $gap;
+    padding-bottom: 20px;
+  }
+  &__container {
+    display: grid;
+
+    margin-bottom: 20px;
+
+    grid-auto-rows: minmax($local-height, calc(33.33333333vh - $local-gap));
+    @include lg-min {
+      grid-template-areas: "a1 a1 a2 a3"
+      "a4 a5 a5 a6"
+      "a7 a8 a9 a6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+    // @include lg {
+    //   grid-template-areas: "a1 a1 a2 a3"
+    //   "a4 a5 a5 a6"
+    //   "a7 a8 a9 a6";
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
+    @include lg {
+      grid-template-areas: "a1 a1 a2"
+      "a3 a4 a4"
+      "a5 a5 a6"
+      "a7 a8 a6"
+      "a7 a9 a9";
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md {
+      grid-template-areas: "a1 a2"
+      "a3 a2"
+      "a4 a4"
+      "a5 a6"
+      "a5 a7"
+      "a8 a9";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm-min {
+      gap: $gap-sm;
+    }
+    @include sm {
+      gap: $gap;
+
+      grid-template-areas: "a1"
+      "a2"
+      "a3"
+      "a4"
+      "a5"
+      "a6"
+      "a7"
+      "a8"
+      "a9";
+      grid-template-columns: 1fr;
+    }
+
+    // .btn {
+    //   @include button(19px, 97px);
+    // }
+  }
+
+  &__item {
+    position: relative;
+
+    overflow: hidden;
+    @for $i from 1 through 9 {
+      &:nth-child(#{$i}) {
+        grid-area: a#{$i};
+      }
+    }
+
+    &:hover {
+      .skills__item-overlay {
+        opacity: 0.95;
+      }
+      .skills__item-image {
+        scale: 1.02;
+      }
+    }
+  }
+
+  &__item-image {
+    transition: all 0.2s ease-in-out;
+
+    background-position: center;
+    background-size: cover;
+
+    @include abs-stretch(1);
+  }
+
+  &__item-overlay {
+    transition: all 0.2s ease-in-out;
+
+    opacity: 0.8;
+    background-color: $color-primary;
+
+    @include abs-stretch(2);
+  }
+
+  &__item-title {
+    margin: 0;
+
+    letter-spacing: 0.1em;
+
+    font-family: $font-family;
+
+    @include abs-stretch(3);
+    @include subtitle($color-white);
+    @include sm {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    letter-spacing: 10%;
+    pointer-events: auto;
+
+    @include link(20px, $color-white);
+  }
+}

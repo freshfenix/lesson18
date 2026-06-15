@@ -1,7 +1,7 @@
-@use "../abstracts/" as *;
+@use '../abstracts/' as *;
 
 .header {
-  padding: 20px 0 12px;
+  padding: $gap 0 12px;
   &--absolute {
     position: absolute;
     z-index: 10;
@@ -48,7 +48,7 @@
 
   &__list {
     display: flex;
-    gap: 20px;
+    gap: $gap;
 
     @include sm {
       align-items: center;
@@ -103,7 +103,7 @@
       position: absolute;
       z-index: 100;
       top: 25px;
-      right: 20px;
+      right: $gap;
 
       display: block;
 
@@ -152,17 +152,15 @@
     display: block;
 
     width: 30px;
-    height: 20px;
-    padding: 0 !important;
+    height: 30px;
 
     cursor: pointer;
-    transition: opacity 0.3s ease-in-out,
-    visibility 0.3s ease-in-out;
+    transition:
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
 
-    border: none !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
+    background: transparent;
+    background-color: transparent;
 
     span {
       position: absolute;

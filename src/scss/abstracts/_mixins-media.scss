@@ -1,53 +1,98 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 // MEDIA MIXINS
 
+@mixin xl-min {
+  @media (#{$xl} <= width) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-lg {
+  @media (#{$lg} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-md {
+  @media (#{$md} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-sm {
+  @media (#{$sm} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+/* lg */
+@mixin lg-min {
+  @media (#{$lg} <= width) {
+    @content;
+  }
+}
+
 @mixin lg {
-  @media (max-width: $breakpoint-lg) {
+  @media (width < #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-md {
+  @media (#{$md} <= width < #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-sm {
+  @media (#{$sm} <= width < #{$lg}) {
+    @content;
+  }
+}
+
+/* md */
+@mixin md-min {
+  @media (#{$md} <= width) {
     @content;
   }
 }
 
 @mixin md {
-  @media (max-width: $breakpoint-md) {
+  @media (width < #{$md}) {
+    @content;
+  }
+}
+
+@mixin md-sm {
+  @media (#{$sm} <= width < #{$md}) {
+    @content;
+  }
+}
+
+/* sm */
+@mixin sm-min {
+  @media (#{$sm} <= width) {
     @content;
   }
 }
 
 @mixin sm {
-  @media (max-width: $breakpoint-sm) {
+  @media (width < #{$sm}) {
     @content;
   }
 }
 
-@mixin xs {
-  @media (max-width: $breakpoint-xs) {
-    @content;
-  }
-}
+// xs
 
-// MIN MIXINS
-
-@mixin lg-min {
-  @media (min-width: $breakpoint-lg-plus) {
-    @content;
-  }
-}
-
-@mixin md-min {
-  @media (min-width: $breakpoint-md-plus) {
-    @content;
-  }
-}
-
-@mixin sm-min {
-  @media (min-width: $breakpoint-sm-plus) {
-    @content;
-  }
-}
-
-@mixin xs-min {
-  @media (min-width: $breakpoint-xs-plus) {
+@mixin sm-xs {
+  @media (#{$xs} <= width < #{$sm}) {
     @content;
   }
 }

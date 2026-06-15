@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 .hero {
   margin: auto;
 
@@ -8,5 +9,31 @@
 
     letter-spacing: 8%;
     text-transform: uppercase;
+
+    @include title($color-white);
+  }
+}
+.overlay {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  &::before {
+    content: "";
+
+    background-color: $color-primary;
+
+    @include abs-stretch(-2);
+  }
+  &::after {
+    content: "";
+
+    opacity: 0.4;
+    background: $color-primary url(../../../assets/images/img-header.webp) center / cover no-repeat;
+
+    @include abs-stretch(-1);
   }
 }

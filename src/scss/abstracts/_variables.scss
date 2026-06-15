@@ -1,30 +1,39 @@
 // BREAKPOINTS
 
-$breakpoint-xl: 1920px;
-$breakpoint-lg: 1200px;
-$breakpoint-md: 992px;
-$breakpoint-sm: 768px;
-$breakpoint-xs: 576px;
-$breakpoint-xl-plus: $breakpoint-xl + 0.2px;
-$breakpoint-lg-plus: $breakpoint-lg + 0.2px;
-$breakpoint-md-plus: $breakpoint-md + 0.2px;
-$breakpoint-sm-plus: $breakpoint-sm + 0.2px;
-$breakpoint-xs-plus: $breakpoint-xs + 0.2px;
+// $breakpoint-xl-plus: $breakpoint-xl + 0.2px;
+// $breakpoint-lg-plus: $breakpoint-lg + 0.2px;
+// $breakpoint-md-plus: $breakpoint-md + 0.2px;
+// $breakpoint-sm-plus: $breakpoint-sm + 0.2px;
+
+$ul: 1340px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 320px;
+$gap: 20px;
 
 // GAPS
-$gap-sm: 20px;
-$gap-md: 27px;
-$gap-lg: 45px;
-$gap-xl: 50px;
-$gap-2xl: 60px;
+$gap-sm: $gap * 0.5; // 10px / або math.div($gap, 2) / або calc($gap / 2)
+$gap-lg: $gap * 1.5; // 30px
+$gap-x2: $gap * 2; // 40px
+$gap-x3: $gap * 3; // 60px
+$gap-x4: $gap * 4; // 80px
+$gap-x5: $gap * 5; // 100px
+
+// $gap-sm: 10px;
+// $gap-md: 20px;
+// $gap-lg: 45px;
+// $gap-xl: 50px;
+// $gap-2xl: 60px;
 
 // FONT SIZES
 
 $font-size-sm: 13px;
 $font-size-md: 16px;
 $font-size-lg: 18px;
-$font-size-xl: 26px;
-$font-size-2xl: 30px;
+$font-size-xl: 24px;
+$font-size-2xl: 32px;
 $font-size-3xl: 40px;
 $font-size-4xl: 60px;
 
@@ -36,5 +45,5 @@ $font-weight-lg: 700;
 
 // FONT FAMILLY
 
-$font-family: "Roboto", sans-serif;
-$font-family2: "Roboto Slab", sans-serif;
+$font-family: 'Roboto', sans-serif;
+$font-family2: 'Roboto Slab', sans-serif;

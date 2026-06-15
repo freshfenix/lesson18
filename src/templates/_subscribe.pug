@@ -1,0 +1,11 @@
+section.subscribe
+  h2.visually-hidden Subscribe section
+  .container.subscribe__container
+    form.subscribe__form(action="#" method="post")
+      label.visually-hidden(for="subscribe-name") Your name
+      input#subscribe-name.subscribe__input.subscribe__input--name(type="text" name="name" placeholder="Your name...")
+
+      label.visually-hidden(for="subscribe-email") Your email
+      input#subscribe-email.subscribe__input.subscribe__input--email(type="email" name="email" placeholder="Your email...")
+
+      button.btn.subscribe__button(type="submit") Subscribe

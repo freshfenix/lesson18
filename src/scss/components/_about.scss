@@ -1,0 +1,86 @@
+@use '../abstracts/' as *;
+
+.about {
+  background-color: $color-gray-light2;
+
+  &__container {
+    display: grid;
+    align-items: start;
+    gap: 30px;
+    flex-wrap: wrap;
+    min-height: 700px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @include sm-min {
+      grid-template-columns: 1fr 0.5fr;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    letter-spacing: 0.04em;
+
+    line-height: 1.05;
+
+    @include sm-min {
+      max-width: 325px;
+    }
+    @include sm {
+      max-width: 250px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-right: 25px;
+
+    @include sm-min {
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 1px;
+        height: 200px;
+
+        content: '';
+
+        background-color: rgba($color-gray, 0.45);
+      }
+    }
+
+    @include sm {
+      &::before {
+        display: none;
+      }
+    }
+
+    p {
+      margin: 0 0 22px;
+
+      letter-spacing: 0.03em;
+
+      line-height: 1.45;
+
+      @include text(1.125rem, $color-gray);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
