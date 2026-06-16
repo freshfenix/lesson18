@@ -63,28 +63,28 @@
 
   &__info {
     margin-top: $gap;
+  }
 
-    h2.subtitle {
-      text-align: center;
-      letter-spacing: 0.299em;
+  &__subtitle {
+    text-align: center;
+    letter-spacing: 0.299em;
 
-      color: $color-gray;
+    color: $color-gray;
 
-      font-size: 1rem;
-      font-weight: 100;
+    font-size: 1rem;
+    font-weight: 100;
 
-      span {
-        display: block;
+    span {
+      display: block;
 
-        margin-top: 6px;
+      margin-top: 6px;
 
-        letter-spacing: 0.05em;
+      letter-spacing: 0.05em;
 
-        color: $color-white;
+      color: $color-white;
 
-        font-weight: $font-weight-lg;
-        line-height: 20px;
-      }
+      font-weight: $font-weight-lg;
+      line-height: 20px;
     }
   }
 }

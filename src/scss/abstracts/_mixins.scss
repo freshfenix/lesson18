@@ -1,6 +1,6 @@
-@use 'variables' as *;
-@use 'skin' as *;
-@use 'mixins-media' as *;
+@use "variables" as *;
+@use "skin" as *;
+@use "mixins-media" as *;
 
 @mixin container {
   max-width: 1300px;
@@ -53,6 +53,10 @@
 }
 
 @mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 5px;
 
   cursor: pointer;
@@ -103,6 +107,7 @@
   }
   &:hover,
   &:focus {
+    color: $color-white;
     background-color: $color-accent;
   }
 }
