@@ -393,6 +393,9 @@ a:hover{
 .logo{
   height:60px;
 }
+.logo__link{
+  display:block;
+}
 .logo__img{
   width:100%;
   height:100%;
