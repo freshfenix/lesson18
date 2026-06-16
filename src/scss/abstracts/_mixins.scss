@@ -1,7 +1,6 @@
-@use "variables" as *;
-@use "skin" as *;
-@use "extends" as *;
-@use "mixins-media" as *;
+@use 'variables' as *;
+@use 'skin' as *;
+@use 'mixins-media' as *;
 
 @mixin container {
   max-width: 1300px;
