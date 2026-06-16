@@ -16,12 +16,11 @@
 
 .btn {
   @include button;
-
-  &__box {
-    display: flex;
-    gap: $gap;
-    justify-content: center;
-  }
+}
+.button-group {
+  display: flex;
+  gap: $gap;
+  justify-content: center;
 }
 
 .no-scroll {
